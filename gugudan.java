@@ -35,7 +35,7 @@
 //         scanner.close();
 //     }
 // }
-// 메소드(함수)를 이용한 방식
+//메소드(함수)를 이용한 방식
 public class gugudan {
     public static int[] calculate(int times) {
         int[] result = new int[9];
