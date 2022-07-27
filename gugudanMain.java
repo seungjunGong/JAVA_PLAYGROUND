@@ -4,13 +4,20 @@ public class gugudanMain {
 
         System.out.println("단을 입력하세요: ");
         Scanner scan = new Scanner(System.in);
-        int step = scan.nextInt();
+        String step = scan.nextLine();
         System.out.println("***** " + step + "단 *****");
+        String[] steps = step.split(",");
 
-        for (int j = 2; j < (step + 1); j++) {
-            int[] sum = gugudanclass.calculate(j, step);
-            gugudanclass.print(sum);
+        int first = Integer.parseInt(steps[0]);
+        int second = Integer.parseInt(steps[1]);
+
+        for(int i = 2; i < first + 1; i++)
+        {
+            int[] dif_gugudan = gugudanclass.calculate(i,second);
+            gugudanclass.print(dif_gugudan);
             System.out.println("");
         }
+        scan.close();
     }
+    
 }
